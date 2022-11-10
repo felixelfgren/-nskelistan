@@ -10,6 +10,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String userName;
+    String password;
     String name;
 
 }
