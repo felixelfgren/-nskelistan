@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Santas Helpers presents...ONSKELISTAN!</title>
-</head>
-<body>
-<h1>Team Satans Helpers</h1>
+    <title>Santas Helpers presents...ONSKELISTAN!</title></head>
+<body><h1>Team Satans Helpers</h1>
 <h2>Presents...</h2>
 <h3>ÖNSKELISTAN 2022...release 1st of December.</h3>
+<form action="/" method="POST" th:object="${user}"> Name: <input type="text" th:field="*{name}"/> Username: <input
+        type="text" th:field="*{username}"/> Password: <input type="password" th:field="*{password}"/> <input
+        type="submit"/></form>
 </body>
 </html>
