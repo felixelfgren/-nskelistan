@@ -1,11 +1,9 @@
 package com.santashelpers.onskelistan;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
 
 @Entity
-public class User {
+public class Wisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
