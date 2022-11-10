@@ -10,5 +10,7 @@ public class List {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
+    String product;
+
 
 }

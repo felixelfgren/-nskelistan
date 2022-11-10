@@ -11,6 +11,8 @@ public class Wisher {
     String password;
     String name;
 
+
+
     public User() {
     }
 
