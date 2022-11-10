@@ -1,5 +1,5 @@
 
-        package com.santashelpers.onskelistan;
+package com.santashelpers.onskelistan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,6 +42,7 @@ public class OnskelistanController {
     @GetMapping("/add")
     public String add(HttpSession session, @ModelAttribute Wisher user){
 
+    return "nada";
     }
 
     @PostMapping("/add")
