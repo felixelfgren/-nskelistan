@@ -9,6 +9,7 @@ public class OnskelistanController {
 
     @GetMapping("/")
     public String index(Model model){
+
         return "index";
     }
 }
