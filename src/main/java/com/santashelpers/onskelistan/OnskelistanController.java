@@ -44,6 +44,12 @@ public class OnskelistanController {
 
     }
 
+    @PostMapping("/add")
+    public String addbook(Model model, HttpSession session, @ModelAttribute Wisher wisher){
+        wisherRepository.save(wisher);
+        return "redirect:/";
+    }
+
     @GetMapping("/logout")
     public String logout(HttpSession session, HttpServletResponse res){
         session.removeAttribute("username"); // this would be an ok solution
