@@ -60,6 +60,19 @@ public class OnskelistanController {
         res.addCookie(cookie);
         return "redirect:/";
     }
+    @GetMapping("/login")
+    public String getlogin(Model model){
+        model.addAttribute("user", new Wisher());
+        return "login";
+    }
+    @PostMapping("/login")
+    public String loginNew(HttpSession session, @ModelAttribute Wisher user){
+        if (user.getUsername().equals("admin") && user.getPassword().equals("123")) {
+            session.setAttribute("username", user.getUsername());
+            return "onskelista";
+        }
+        return "redirect:/";
+    }
 }
 
 
