@@ -39,6 +39,11 @@ public class OnskelistanController {
         return "redirect:/";
     }
 
+    @GetMapping("/add")
+    public String add(HttpSession session, @ModelAttribute Wisher user){
+
+    }
+
     @GetMapping("/logout")
     public String logout(HttpSession session, HttpServletResponse res){
         session.removeAttribute("username"); // this would be an ok solution
