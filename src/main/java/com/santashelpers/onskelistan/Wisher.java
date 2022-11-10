@@ -13,7 +13,7 @@ public class Wisher {
 
 
 
-    public User() {
+    public Wisher() {
     }
 
     public Long getId() {
