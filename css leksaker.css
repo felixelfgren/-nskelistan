@@ -1,0 +1,169 @@
+body{
+    background-color: rgba(128, 128, 128, 0.703);
+}
+.parent1 {
+        display:flex;
+        justify-content: center;
+        margin-top: 3em;
+        column-gap: 5px;
+        row-gap: 5px;
+
+}
+.product1 {
+    border: 5px solid darkgreen;
+    padding:30px;
+    background-color: white;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 0px #858585;
+   
+}
+.button1 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product2 {
+    border: 5px solid darkgreen;
+    padding: 30px;
+    background-color: white;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 0px #858585;
+  
+}
+.button2 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product3 {
+    border: 5px solid darkgreen;
+    padding: 30px;
+    background-color: white;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 0px #858585;
+    display:inline-table;
+}
+.button3 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product4 {
+    border: 5px solid darkgreen;
+    padding: 30px;
+    background-color: white;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 0px #858585;
+    display:inline-table;
+}
+.button4 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product5 {
+    border: 5px solid darkgreen;
+    padding: 30px;
+    background-color: white;
+    font-size: 15px;
+    box-shadow: 0px 0px 5px 0px #858585;
+    display:inline-table;
+}
+.button5 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.parent2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    column-gap: 5px;
+    row-gap: 5px;
+
+}
+.product6 {
+    border: 5px solid darkgreen;
+padding:30px;
+background-color: white;
+font-size: 15px;
+box-shadow: 0px 0px 5px 0px #858585;
+display:inline-table;
+}
+.button6 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product7 {
+border: 5px solid darkgreen;
+padding: 30px;
+background-color: white;
+font-size: 15px;
+box-shadow: 0px 0px 5px 0px #858585;
+display:inline-table;
+}
+.button7 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product8 {
+    border: 5px solid darkgreen;
+padding: 30px;
+background-color: white;
+font-size: 15px;
+box-shadow: 0px 0px 5px 0px #858585;
+display:inline-table;
+}
+.button8 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product9 {
+    border: 5px solid darkgreen;
+padding: 30px;
+background-color: white;
+font-size: 15px;
+box-shadow: 0px 0px 5px 0px #858585;
+display:inline-table;
+}
+.button9 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
+.product10 {
+    border: 5px solid darkgreen;
+padding: 30px;
+background-color: white;
+font-size: 15px;
+box-shadow: 0px 0px 5px 0px #858585;
+display:inline-table;
+}
+.button10 {
+    justify-content: center;
+    display:block;
+    width: 100px;
+    height: 15px;
+    
+}
