@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Detaljvy</title>
 </head>
 <body>
 <h1>Innehåll i en önskelista</h1>
+
+
+<h1>WISHLISTS</h1>
+<div>
+    <p><a th:href="'/?page=' + ${page}">Back to Önskelistor</a></p>
+</div>
+<div>
+    <p><a th:href="'/edit/' + ${list?.id}">Edit list</a></p>
+</div>
+<table>
+    <tr>
+        <th>LIST ID</th>
+        <th th:text="${list?.id}"></th>
+    </tr>
+    <tr>
+        <th>NAMN</th>
+        <th th:text="${list?.product}"></th>
+    </tr>
+</table>
 </body>
 </html>
