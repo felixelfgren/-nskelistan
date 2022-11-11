@@ -46,6 +46,18 @@ public class OnskelistanController {
         return "redirect:/";
     }
 
+
+    @GetMapping("/inloggad")
+    public String level333(HttpSession session, @ModelAttribute Wisher wisher, @ModelAttribute List list){
+        var onskelista = wisher.getWishlist();
+        session.getAttribute("username");
+        session.setAttribute("onskelista", onskelista);
+
+        return "logged_in";
+    }
+
+    @PostMapping("/inloggad")
+
     @GetMapping("/add")
     public String add(HttpSession session, @ModelAttribute Wisher user){
 
