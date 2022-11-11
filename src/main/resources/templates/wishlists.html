@@ -7,14 +7,14 @@
 <body>
 <h1>Alla önskelistor</h1>
 
-<table style="text-align:left">
+<table style="css.css">
     <tr>
-        <th>Title</th>
-        <th>Author</th>
+        <th>Id</th>
+        <th>Produkt</th>
     </tr>
     <tr th:each="list : ${lists}">
-        <th><a th:href="'/wishlist/' + ${currentPage} + '/' + ${wishList.id}" th:text="${wishList.product}"></a></th>
-        <th th:text="${book.author}"></th>
+        <th><a th:href="'/wishlist/' + ${currentPage} + '/' + ${list.id}" th:text="${list.product}"></a></th>
+        <th th:text="${list.product}"></th>
     </tr>
 </table>
 <div>

@@ -108,7 +108,7 @@ public String wishlists(Model model, @RequestParam(value="page", required=false,
 }
 
     private List<WishList> getPage(int page, int pageSize) {
-        List<WishList> lists = (List<WishList>)listRepository.findAllByOrderByProduct();
+        List<WishList> lists = (List<WishList>)listRepository.findAllByOrderById();
         int from = Math.max(0,page*pageSize);
         int to = Math.min(lists.size(),(page+1)*pageSize);
 
