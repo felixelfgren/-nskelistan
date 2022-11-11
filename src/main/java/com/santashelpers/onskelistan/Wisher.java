@@ -19,7 +19,13 @@ public class Wisher {
     public Wisher() {
     }
 
+    public List<WishList> getWishList() {
+        return wishList;
+    }
 
+    public void setWishList(List<WishList> wishList) {
+        this.wishList = wishList;
+    }
 
     public Long getId() {
         return id;
