@@ -11,16 +11,16 @@ public class Wisher {
     String password;
     String name;
 
-    java.util.List<List> wishlist = new ArrayList<>();
+    java.util.List<WishList> wishlist = new ArrayList<>();
 
     public Wisher() {
     }
 
-    public java.util.List<List> getWishlist() {
+    public java.util.List<WishList> getWishlist() {
         return wishlist;
     }
 
-    public void setWishlist(java.util.List<List> wishlist) {
+    public void setWishlist(java.util.List<WishList> wishlist) {
         this.wishlist = wishlist;
     }
 

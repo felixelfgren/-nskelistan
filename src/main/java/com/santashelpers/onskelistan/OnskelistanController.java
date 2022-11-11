@@ -6,15 +6,22 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
+
 @Controller
 public class OnskelistanController {
 
-
+    private static final int PAGE_SIZE = 10;
     @Autowired
     private WisherRepository wisherRepository;
+
+    @Autowired
+    private ListRepository listRepository;
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("user", new Wisher());
@@ -72,6 +79,39 @@ public class OnskelistanController {
             return "onskelista";
         }
         return "redirect:/";
+    }
+@GetMapping("/wishlists")
+public String wishlists(Model model, @RequestParam(value="page", required=false, defaultValue="1") int page){
+    List<WishList> lists = getPage(page-1, PAGE_SIZE);
+    int pageCount = numberOfPages(PAGE_SIZE);
+    int[] pages = toArray(pageCount);
+
+    model.addAttribute("lists", lists);
+    model.addAttribute("pages", pages);
+    model.addAttribute("currentPage", page);
+    model.addAttribute("showPrev", page > 1);
+    model.addAttribute("showNext", page < pageCount);
+
+        return "wishlists";
+}
+
+    private List<WishList> getPage(int page, int pageSize) {
+        List<WishList> lists = (List<WishList>)listRepository.findAllByOrderByProduct();
+        int from = Math.max(0,page*pageSize);
+        int to = Math.min(lists.size(),(page+1)*pageSize);
+
+        return lists.subList(from, to);
+    }
+    private int numberOfPages(int pageSize) {
+        List<WishList> lists = (List<WishList>)listRepository.findAll();
+        return (int)Math.ceil((double) lists.size() / pageSize);
+    }
+    private int[] toArray(int num) {
+        int[] result = new int[num];
+        for (int i = 0; i < num; i++) {
+            result[i] = i+1;
+        }
+        return result;
     }
 }
 
