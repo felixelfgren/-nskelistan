@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+
+<a th:href="/logout" th:text="${Logga ut}"></a>
+
+<div th:each="${onskan: ${onskelista}">
+    <div th:text="${onskan.product}"></div>
+</div>
+
+<a th:if="${session.onskelista == null}" th:text="${skapa önskelista}" th:href="${/url till skapa lista}"></a>
+<a th:if="${session.onskelista != null}" th:text="${ändra önskelista}" th:href="${/url till ändra lista}"></a>
+
 
 </body>
 </html>
