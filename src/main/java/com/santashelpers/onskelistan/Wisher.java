@@ -1,6 +1,7 @@
 package com.santashelpers.onskelistan;
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Wisher {
@@ -11,18 +12,14 @@ public class Wisher {
     String password;
     String name;
 
-    java.util.List<WishList> wishlist = new ArrayList<>();
+    @OneToMany
+    List<WishList> wishList = new ArrayList<>();
+    //java.util.List<WishList> wishlist = new ArrayList<>();
 
     public Wisher() {
     }
 
-    public java.util.List<WishList> getWishlist() {
-        return wishlist;
-    }
 
-    public void setWishlist(java.util.List<WishList> wishlist) {
-        this.wishlist = wishlist;
-    }
 
     public Long getId() {
         return id;
