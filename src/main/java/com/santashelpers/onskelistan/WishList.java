@@ -1,23 +1,27 @@
 package com.santashelpers.onskelistan;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class WishList {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    String product;
+    String name;
+    int productPrice;
+    @OneToMany
+    List<Product> products = new ArrayList<>();
+
+
 
     public WishList() {
     }
 
-    public WishList(Long id, String product) {
+    public WishList(Long id, String name) {
         this.id = id;
-        this.product = product;
+        this.name = name;
     }
 
     public Long getId() {
@@ -28,11 +32,27 @@ public class WishList {
         this.id = id;
     }
 
-    public String getProduct() {
-        return product;
+    public String getName() {
+        return name;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

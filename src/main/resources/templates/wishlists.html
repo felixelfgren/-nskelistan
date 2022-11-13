@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Alla önskelistor</title>
+    <link rel="stylesheet" type="text/css" href="/temp.css">
+    <script src="/js.js"></script>
 </head>
 <body>
-<h1>Alla önskelistor</h1>
 
-<table style="css.css">
-    <tr>
-        <th>Id</th>
-        <th>Produkt</th>
-    </tr>
-    <tr th:each="list : ${lists}">
-        <th><a th:href="'/wishlist/' + ${currentPage} + '/' + ${list.id}" th:text="${list.product}"></a></th>
-        <th th:text="${list.product}"></th>
-    </tr>
-</table>
+<heading>ÖNSKELISTOR:</heading>
+<note th:each="list : ${lists}">
+    <todo>o</todo>
+    <a th:href="'/wishlist/' + ${currentPage} + '/' + ${list.id}" th:text="${list.name}">
+    <text contenteditable="" th:text="${list.name}"></text></a>
+
+</note>
 <div>
 
         <span th:if="${showPrev}">

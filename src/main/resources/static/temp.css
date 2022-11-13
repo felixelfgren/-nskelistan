@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Walter+Turncoat");
+body {
+  font-family: "Walter Turncoat", cursive;
+  font-size: 2.5em;
+  padding: 1em;
+  background-size: 1em 1em;
+  background-image: radial-gradient(circle, rgba(0, 50, 255, 0.2) 1px, rgba(0, 0, 0, 0) 2px);
+  background-position: 0.3em 0.62em;
+}
+
+heading {
+  display: block;
+  line-height: 1.001em;
+  color: #37373c;
+  margin-bottom: 1em;
+}
+
+note {
+  display: block;
+  line-height: 1.001em;
+  color: #37373c;
+  margin-left: 1em;
+}
+note text {
+  margin-left: 1.25em;
+  display: flex;
+  margin-top: -1em;
+  outline: none;
+}
+note todo {
+  display: inline-block;
+  position: relative;
+  transform: scale(1.3);
+  cursor: pointer;
+  user-select: none;
+}
+note todo.started:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+note todo.canceled:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+note todo.canceled:after {
+  content: "|";
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 9%;
+  left: 30%;
+}
+note todo.halfway:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+note todo.halfway:after {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 1em;
+  background: rgba(55, 55, 60, 0.95);
+  display: block;
+  border-radius: 0 1em 1em 0;
+  top: 18%;
+  left: 20%;
+  transform: scale(0.5) rotate(45deg);
+}
+note todo.done:before {
+  content: "|";
+  position: absolute;
+  transform: rotate(45deg);
+  top: 8%;
+  left: 30%;
+}
+note todo.done:after {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: rgba(55, 55, 60, 0.95);
+  display: block;
+  border-radius: 50%;
+  top: 8%;
+  left: -40%;
+  transform: scale(0.45);
+}

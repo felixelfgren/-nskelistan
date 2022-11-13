@@ -16,9 +16,10 @@ public class OnskelistanController {
     private static final int PAGE_SIZE = 10;
     @Autowired
     private WisherRepository wisherRepository;
-
     @Autowired
     private ListRepository listRepository;
+    @Autowired
+    private ProductRepository productRepository;
     @GetMapping("/")
     public String index(Model model){
         model.addAttribute("user", new Wisher());
@@ -125,9 +126,11 @@ public String wishlists(Model model, @RequestParam(value="page", required=false,
 
     @GetMapping("/wishlist/{page}/{id}")
     public String book(Model model, @PathVariable Integer page, @PathVariable Long id) {
-        WishList list = listRepository.findById(id).orElse(null);
+        Product prod = productRepository.findById(id).orElse(null);
+        List<Product> customers = (List<Product>)productRepository.findAll();
+        model.addAttribute("customers", customers);
         model.addAttribute("page", page);
-        model.addAttribute("list", list);
+        model.addAttribute("prod", prod);
 
         return "wishlist";
     }

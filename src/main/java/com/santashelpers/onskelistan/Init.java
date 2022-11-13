@@ -24,5 +24,12 @@ ProductRepository productRepository;
             listRepository.save(new WishList(null, "Fridas Önskelista"));
         }
 
+        if(productRepository.count() == 0){
+            productRepository.save(new Product(null, "Gurkburk", 79));
+            productRepository.save(new Product(null, "Havregryn", 17));
+            productRepository.save(new Product(null, "En get", 7599));
+            productRepository.save(new Product(null, "Lasersvärd", 999999));
+
+        }
     }
 }

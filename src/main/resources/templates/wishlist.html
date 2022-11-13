@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:text="http://www.w3.org/1999/XSL/Transform">
 <head>
     <meta charset="UTF-8">
     <title>Detaljvy</title>
+    <link rel="stylesheet" type="text/css" href="/temp.css">
+    <script src="/js.js"></script>
 </head>
 <body>
-<h1>Innehåll i en önskelista</h1>
+
+<!-- adding test code--->
+<heading>Adams lista:</heading>
+<note th:each="list : ${customers}">
+    <todo>o</todo>
+    <text contenteditable="" th:text="${list.name}"></text>
+</note>
 
 
-<h1>WISHLISTS</h1>
 <div>
-    <p><a th:href="'/?page=' + ${page}">Back to Önskelistor</a></p>
+    <p><a th:href="'/wishlists/?page=' + ${page}">Back to Önskelistor</a></p>
 </div>
 <div>
     <p><a th:href="'/edit/' + ${list?.id}">Edit list</a></p>
 </div>
-<table>
-    <tr>
-        <th>LIST ID</th>
-        <th th:text="${list?.id}"></th>
-    </tr>
-    <tr>
-        <th>NAMN</th>
-        <th th:text="${list?.product}"></th>
-    </tr>
-</table>
 </body>
 </html>
