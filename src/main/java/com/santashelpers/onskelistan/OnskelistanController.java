@@ -90,6 +90,14 @@ public class OnskelistanController {
         }
         return "redirect:/";
     }
+    @GetMapping("/register")
+    public String register(){
+        return "register";
+    }
+     @PostMapping("/register")
+     public String postRegister(){
+        return "register";
+     }
 @GetMapping("/wishlists")
 public String wishlists(Model model, @RequestParam(value="page", required=false, defaultValue="1") int page){
     List<WishList> lists = getPage(page-1, PAGE_SIZE);
