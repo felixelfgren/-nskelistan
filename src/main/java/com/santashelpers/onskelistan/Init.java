@@ -22,6 +22,17 @@ ProductRepository productRepository;
             listRepository.save(new WishList(null, "Malins Önskelista"));
             listRepository.save(new WishList(null, "Felix Önskelista"));
             listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
+            listRepository.save(new WishList(null, "Fridas Önskelista"));
         }
 
         if(productRepository.count() == 0){
