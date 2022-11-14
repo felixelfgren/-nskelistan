@@ -49,7 +49,9 @@ public class OnskelistanController {
     public String level333(HttpSession session, @ModelAttribute Wisher wisher){
         var onskelista = wisher.getWishList();
         session.getAttribute("username");
-        session.setAttribute("onskelista", onskelista);
+        if(onskelista.size() > 0) {
+            session.setAttribute("onskelista", onskelista);
+        }
 
         return "logged_in";
     }
