@@ -6,14 +6,14 @@
 </head>
 <body>
 
-<a th:href="/logout" th:text="${Logga ut}"></a>
+<a href="/logout">Logout</a>
 
-<div th:each="${onskan: ${onskelista}">
+<div th:if="${session.onskelista != null}" th:each="onskan: ${session.onskelista}">
     <div th:text="${onskan.product}"></div>
 </div>
 
-<a th:if="${session.onskelista == null}" th:text="${skapa önskelista}" th:href="${/url till skapa lista}"></a>
-<a th:if="${session.onskelista != null}" th:text="${ändra önskelista}" th:href="${/url till ändra lista}"></a>
+<a th:if="${session.onskelista == null}" th:href="${login}">Skapa önskelista</a>
+<a th:if="${session.onskelista != null}" th:href="${login}">Ändra önskelista</a>
 
 
 </body>

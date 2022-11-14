@@ -46,7 +46,7 @@ public class OnskelistanController {
 
 
     @GetMapping("/inloggad")
-    public String level333(HttpSession session, @ModelAttribute Wisher wisher, @ModelAttribute List list){
+    public String level333(HttpSession session, @ModelAttribute Wisher wisher){
         var onskelista = wisher.getWishList();
         session.getAttribute("username");
         session.setAttribute("onskelista", onskelista);
