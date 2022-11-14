@@ -24,7 +24,7 @@ public class WishList {
         this.name = name;
     }
 
-    public Long getId() {
+    public Long getId()  {
         return id;
     }
 
